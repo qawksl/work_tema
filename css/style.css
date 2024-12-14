@@ -188,6 +188,19 @@ a{
     align-items: center;
     
 }
+.list__add{
+    width: 450px;
+    height: 542px;
+    padding: 10px;
+    margin-left: 224px;
+    margin-top: -80px;
+    margin-bottom: 135px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .list__text{
     margin-top: -50px;
 }
@@ -211,11 +224,39 @@ a{
     color: #FFFFFF;
     text-decoration: none;
 }
+.btn-1{
+    background-color: #457EC7;
+    width: 251.45px;
+    height: 41px;
+    text-align: center;
+    z-index: 2001;
+    margin-left: -384px;
+    border-radius: 10px;
+    border: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn-1 a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.del{
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+}
 .icons{
     width: 25px;
     height: 25px;
     position: relative;
     top: 32px;
+}
+.btn__add{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-top: 379px;
 }
 .menu{
     width: 25px;
@@ -286,17 +327,15 @@ a{
     font-size: 20px;
     font-weight: 600;
     background: #ffffff;
-    opacity: 0.7;
 }
 .form_auth_block label{
     display: block;
-    text-align: center;
     padding: 10px;
     background: #ffffff;
-    opacity: 0.7;
     font-weight: 600;
     margin-bottom: 10px;
     margin-top: 10px;
+    margin: 0 48px;
 }
 .form_auth_block input{
   display: block;
@@ -304,7 +343,6 @@ a{
   width: 80%;
   height: 45px;
   border-radius: 10px;  
-  border:none;
   outline: none;
 }
 input:focus {
@@ -316,11 +354,13 @@ input:focus {
     display: block;
     width: 80%;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 45px;
     border-radius: 10px;
     height: 35px;
     border: none;
     cursor: pointer;
+    background-color: #457EC7;
+    color: #FFFFFF;
 }
 ::-webkit-input-placeholder {color:#3f3f44; padding-left: 10px;} 
 ::-moz-placeholder          {color:#3f3f44; padding-left: 10px;} 
