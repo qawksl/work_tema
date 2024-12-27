@@ -11,3 +11,24 @@ menuBtn.addEventListener('click', () => {
     lineThree.classList.toggle('line-cross');
     link.classList.toggle('fade-in');
 })
+
+const axios = require('axios');
+async function doPostRequest() {
+
+
+    let res = await axios.post('http://212.57.137.147:8080/movies');
+
+    let data = res.data;
+    console.log(data);
+}
+
+doPostRequest();
+// axios.post('http://212.57.137.147:8080/movies',
+    
+//     {
+//      "name": "The Matrix",
+//      "artemRating": 9.5,
+//      "leraRating": 8.8,
+//      "photoName": "matrix.jpg"
+//     }
+// );
