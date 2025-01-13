@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 html {
     font-size: 100%;
 }
@@ -11,13 +12,15 @@ body {
     background-color: #EDEDED;
     margin: 0;
 }
-.container{
+
+.container {
 
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
-    
+
 }
+
 /* изменяем полоcу прокрутки */
 
 ::-webkit-scrollbar {
@@ -38,6 +41,7 @@ main {
     display: block;
     unicode-bidi: isolate;
 }
+
 hr {
     margin: 22px 0;
     height: 1px;
@@ -47,6 +51,7 @@ hr {
     background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     background-image: linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
+
 .nav {
     /*  ширна произвольная, не стесняйтесь экспериментировать */
     width: 279px;
@@ -70,6 +75,7 @@ hr {
     /* поверх других элементов */
     z-index: 2000;
 }
+
 .nav-toggle {
     /* абсолютно позиционируем */
     position: absolute;
@@ -108,17 +114,19 @@ hr {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
     text-align: center;
     display: block;
     position: fixed;
     text-decoration: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     color: #333;
 }
 
@@ -131,30 +139,35 @@ li{
     position: absolute;
     display: none;
 }
-[id='nav-toggle']:checked ~ .nav > .nav-toggle {
+
+[id='nav-toggle']:checked~.nav>.nav-toggle {
     left: auto;
     right: 2px;
     top: 1em;
 }
-[id='nav-toggle']:checked ~ .nav {
+
+[id='nav-toggle']:checked~.nav {
     left: 0;
-    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
 }
-[id='nav-toggle']:checked ~ main > article {
+
+[id='nav-toggle']:checked~main>article {
     -webkit-transform: translateX(320px);
     -moz-transform: translateX(320px);
     transform: translateX(320px);
 }
-.nav > ul {
+
+.nav>ul {
     display: block;
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.nav > ul > li > a {
+
+.nav>ul>li>a {
     display: inline-block;
     position: relative;
     bottom: -15px;
@@ -167,7 +180,8 @@ li{
     text-align: left;
 
 }
-a{
+
+a {
     text-decoration: none;
     color: #000000;
 }
@@ -179,18 +193,19 @@ a{
     margin-left: 60px;
     margin-top: -80px;
     margin-bottom: 135px;
-    
-    
+
+
     background: #FFFFFF;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-.list__add{
+
+.list__add {
     width: 450px;
-    height: 542px;
+    height: 557px;
     padding: 10px;
     margin-left: 224px;
     margin-top: -10px;
@@ -201,10 +216,86 @@ a{
     justify-content: center;
     align-items: center;
 }
-.list__text{
-    margin-top: -50px;
+
+.list__text {
+    margin-top: -83px;
+    margin-right: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
 }
-.btn{
+
+.list__text label {
+    display: block;
+    padding: 10px;
+    background: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin: auto;
+}
+
+.list__text input {
+    display: block;
+    margin: 0 auto;
+    width: 180%;
+    height: 35px;
+    outline: none;
+
+}
+
+.image-container {
+    width: 314px;
+    height: 156px;
+    margin: 20px auto;
+    display: block;
+    position: relative; /* Важно */
+    overflow: hidden;
+}
+#imagePreview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Важно */
+}
+.file-input-container {
+    text-align: center;
+    margin: -11px 0;
+}
+dialog{
+    background: #457EC7;
+    color: white;
+    width: 299px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    color: white;
+    top:30px;
+    left: 80%;
+    animation: fade 6s forwards;
+}
+@keyframes fade{
+    0%{
+      transform: translateY(-300px);
+    }
+    20% {
+      transform: translateY(0px);
+    }
+    80% {
+      transform: translateY(0px);
+    }
+    100%{
+      transform: translateY(-300px);
+    }
+}
+
+.btn {
     background-color: #457EC7;
     position: absolute;
     width: 251.45px;
@@ -220,11 +311,13 @@ a{
     top: 849px;
 
 }
-.btn a{
+
+.btn a {
     color: #FFFFFF;
     text-decoration: none;
 }
-.btn-1{
+
+.btn-1 {
     background-color: #457EC7;
     width: 251.45px;
     height: 41px;
@@ -237,79 +330,93 @@ a{
     justify-content: space-around;
     align-items: center;
 }
-.btn-1 a{
+
+.btn-1 a {
     color: #FFFFFF;
     text-decoration: none;
 }
-.del{
+
+.del {
     width: 30px;
     height: 30px;
     margin-left: 40px;
 }
-.icons{
+
+.icons {
     width: 25px;
     height: 25px;
     position: relative;
     top: 32px;
 }
-.btn__add{
+
+.btn__add {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    margin-top: 431px;
+    margin-top: 474px;
 }
-.menu{
+
+.menu {
     width: 25px;
     height: 25px;
 }
-.menu__text{
+
+.menu__text {
     padding: 13px 2px;
     margin-left: 38px;
 }
-.menu__img .icons{
+
+.menu__img .icons {
     display: flex;
 }
+
 .menu__title {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     margin-top: 24px;
 }
-.menu__title .menu__text{
+
+.menu__title .menu__text {
     display: flex;
 }
 
 
 /* .navigation {
     position: relative; /* Важно для абсолютного позиционирования элементов внутри */
-    /* width: 60px; Ширина меню */
-    /* height: 100%; */
-    /* background-color: #ffffff; */
+/* width: 60px; Ширина меню */
+/* height: 100%; */
+/* background-color: #ffffff; */
 /* } */
 .main {
     max-width: 1024px;
     margin: 0 auto
-   
 }
-.list__game{
+
+.list__game {
     padding: 32px 0
 }
-.list__game .container{
+
+.list__game .container {
     display: flex;
     flex-wrap: wrap;
 }
-.new__card{
+
+.new__card {
     width: 30px;
     height: 30px;
 }
-.add{
+
+.add {
     display: flex;
     justify-content: flex-end;
     padding: 15px 16px;
-    margin-top: 11px;}
+    margin-top: 11px;
+}
+
 /* аксио */
 
-.form_auth_block{
+.form_auth_block {
     width: 500px;
     height: 500px;
     margin: 0 auto;
@@ -317,10 +424,12 @@ a{
     background-size: cover;
     border-radius: 4px;
 }
-.form_auth_block_content{
-  padding-top: 15%;
+
+.form_auth_block_content {
+    padding-top: 15%;
 }
-.form_auth_block_head_text{
+
+.form_auth_block_head_text {
     display: block;
     text-align: center;
     padding: 10px;
@@ -328,7 +437,8 @@ a{
     font-weight: 600;
     background: #ffffff;
 }
-.form_auth_block label{
+
+.form_auth_block label {
     display: block;
     padding: 10px;
     background: #ffffff;
@@ -337,20 +447,23 @@ a{
     margin-top: 10px;
     margin: 0 48px;
 }
-.form_auth_block input{
-  display: block;
-  margin: 0 auto;
-  width: 80%;
-  height: 45px;
-  border-radius: 10px;  
-  outline: none;
+
+.form_auth_block input {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 45px;
+    border-radius: 10px;
+    outline: none;
 }
-input:focus {
+
+/* input:focus {
   color: #000000;
   border-radius: 10px;
   border: 2px solid #436fea;
-}
-.form_auth_button{
+  
+} */
+.form_auth_button {
     display: block;
     width: 80%;
     margin: 0 auto;
@@ -362,7 +475,23 @@ input:focus {
     background-color: #457EC7;
     color: #FFFFFF;
 }
-::-webkit-input-placeholder {color:#3f3f44; padding-left: 10px;} 
-::-moz-placeholder          {color:#3f3f44; padding-left: 10px;} 
-:-moz-placeholder           {color:#3f3f44; padding-left: 10px;} 
-:-ms-input-placeholder      {color:#3f3f44; padding-left: 10px;} 
+
+::-webkit-input-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+::-moz-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+:-moz-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
+
+:-ms-input-placeholder {
+    color: #3f3f44;
+    padding-left: 10px;
+}
