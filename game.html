@@ -11,7 +11,7 @@
 
 <body>
     <div class="add">
-        <span id="createButton"><a href="./index5.html"><img src="./imges/new.png" alt="" class="new__card"></a></span>
+        <span id="createButton"><a href="./creature.html"><img src="./imges/new.png" alt="" class="new__card"></a></span>
 
     </div>
     <input type="checkbox" id="nav-toggle" hidden>
@@ -23,13 +23,13 @@
             <div class="menu__img">
                 <div class="menu__title">
                     <img src="./imges/game.png" alt="" class="icons">
-                    <li><a href="./index1.html" class="menu__text">Играли</a></li>
+                    <li><a href="./game.html" class="menu__text">Играли</a></li>
                     <img src="./imges/look.png" alt="" class="icons">
-                    <li><a href="./index3.html" class="menu__text">Смотрели</a></li>
+                    <li><a href="./look.html" class="menu__text">Смотрели</a></li>
                 </div>
             </div>
         </ul>
-        <button class="btn"><a href="./index4.html">Вход</a></button>
+        <button class="btn"><a href="./avtorisation.html">Вход</a></button>
 
     </nav>
     <main class="main">
@@ -40,11 +40,11 @@
 
         </section>
     </main>
-    <dialog id="pop-up">Карточка изменена</dialog>
+    <dialog id="pop-up">Карточка сохранена</dialog>
 
 
 
-    <script src="card.js"></script>
+    <script src="game.js"></script>
 <script>
     const menuContainer = document.querySelector('.navigation');
     src="https://unpkg.com/axios/dist/axios.min.js"
@@ -55,7 +55,7 @@
     const popupStateKey = "popupState";
     let isPopupOpen = false;
     createButton.addEventListener('click', function() {
-        window.location.href = 'index5.html'; // Переход на страницу создания
+        window.location.href = 'creature.html'; // Переход на страницу создания
     });
 
        window.addEventListener('focus', () => {

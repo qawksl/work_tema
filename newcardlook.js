@@ -63,7 +63,7 @@ saveButton.addEventListener('click', function(event) {
     }
 
     localStorage.setItem(storageKey, JSON.stringify(storedCards));
-    window.location.href = 'game.html';
+    window.location.href = 'look.html';
 });
 
 
@@ -86,7 +86,7 @@ function deleteCard(cardId) {
         storedCards = storedCards.filter(card => card.id !== cardId);
         localStorage.setItem(storageKey, JSON.stringify(storedCards));
         alert("Карточка удалена");
-        window.location.href = 'game.html';
+        window.location.href = 'look.html';
     }
 }
 

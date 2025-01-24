@@ -48,7 +48,7 @@ function renderCards(cardList, popupStateKey, popUpElement) {
             cardDiv.appendChild(textDiv)
             cardList.appendChild(cardDiv);
             cardDiv.addEventListener('click', () => {
-                window.location.href = `index5.html?id=${storedCardData.id}`
+                window.location.href = `creature.html?id=${storedCardData.id}`
             });
         })
     }

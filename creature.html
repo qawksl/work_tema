@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./script.js">
+
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle" hidden>
+
+    <nav class="nav">
+        <label for="nav-toggle" class="nav-toggle" onclick><img src="./imges/menu.png" alt="" class="menu"></label>
+
+        <ul >
+            <div class="menu__img">
+                <div class="menu__title">
+                    <img src="./imges/game.png" alt="" class="icons"><li><a href="./game.html"class="menu__text">Играли</a></li>
+                    <img src="./imges/look.png" alt="" class="icons"><li><a href="./look.html"class="menu__text">Смотрели</a></li>
+
+                </div>
+
+            
+            </div>
+            
+
+        </ul>
+        <button class="btn"><a href="./avtorisation.html">Вход</a></button>
+
+    </nav>
+    <main class="main">
+        <section class="list__game">
+            <div class="container" >
+                <div class="list__add">
+                    <div class="list__text">
+                        <div class="file-input-container">
+                            <input type="file" id="imageUpload" accept="image/png">
+                        </div>
+                        <div class="image-container">
+                            <img id="imagePreview" src="" alt="Предварительный просмотр изображения" style="display: none;">
+                        </div>
+                        <form  id="createForm">
+                            <label for="title">Название:</label>
+                            <input type="text" id="name" name="name" placeholder="Название игры" required>
+                            <label >Лера</label>
+                            <input type="text" id="leraRating" name="leraRating" placeholder="Оценка" required>
+                            <label >Артем</label>
+                            <input type="text" id="artemRating" name="artemRating" placeholder="Оценка" required>
+                        </form>
+                    </div>
+                    <div class="btn__add ">
+                        <button type="button" class="btn-l" id="open-btn"  >Сохранить</button>
+                        <a id="delete-btn" class="btn-l" > <img src="./imges/del.png" alt="" class="del"></a>
+                    </div>
+                    <dialog id="pop-up">Карточка создана</dialog>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="newcard.js">
+       
+    </script>
+</body>
+</html>
+
