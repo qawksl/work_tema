@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./script.js">
 </head>
 
 <body>
     <div class="add">
-        <span id="createButton"><a href="./creature.html"><img src="./imges/new.png" alt="" class="new__card"></a></span>
+        <span id="createButton"><a href="./creature.html"><img src="./imges/new.png" alt=""
+                    class="new__card"></a></span>
 
     </div>
     <input type="checkbox" id="nav-toggle" hidden>
@@ -45,25 +45,25 @@
 
 
     <script src="game.js"></script>
-<script>
-    const menuContainer = document.querySelector('.navigation');
-    src="https://unpkg.com/axios/dist/axios.min.js"
-    // JavaScript для главной страницы
-    const createButton = document.getElementById('createButton');
-    const cardList = document.getElementById('cardList');
-    const popUpElement = document.getElementById('pop-up');
-    const popupStateKey = "popupState";
-    let isPopupOpen = false;
-    createButton.addEventListener('click', function() {
-        window.location.href = 'creature.html'; // Переход на страницу создания
-    });
+    <script>
+        const menuContainer = document.querySelector('.navigation');
+        src = "https://unpkg.com/axios/dist/axios.min.js"
+        // JavaScript для главной страницы
+        const createButton = document.getElementById('createButton');
+        const cardList = document.getElementById('cardList');
+        const popUpElement = document.getElementById('pop-up');
+        const popupStateKey = "popupState";
+        let isPopupOpen = false;
+        createButton.addEventListener('click', function () {
+            window.location.href = 'creature.html'; // Переход на страницу создания
+        });
 
-       window.addEventListener('focus', () => {
-         renderCards(cardList, popupStateKey, popUpElement);
-       });
+        window.addEventListener('focus', () => {
+            renderCards(cardList, popupStateKey, popUpElement);
+        });
 
-       renderCards(cardList, popupStateKey, popUpElement);
-</script>
+        renderCards(cardList, popupStateKey, popUpElement);
+    </script>
 </body>
 
 </html>

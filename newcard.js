@@ -1,7 +1,7 @@
 const imageUpload = document.getElementById('imageUpload');
 const imagePreview = document.getElementById('imagePreview');
 const createForm = document.getElementById('createForm');
-const storageKey = "cardData";
+const storageKey = "gameCardData";
 const saveButton = document.getElementById('open-btn');
 const deleteButton = document.getElementById('delete-btn');
 const popupStateKey = "popupState";
@@ -30,15 +30,20 @@ imageUpload.addEventListener('change', function(event) {
     }
 });
 
-
+function saveCardData(card) {
+    let storedCards = JSON.parse(localStorage.getItem(storageKey)) || []; // Правильная инициализация
+    storedCards.push(card);
+    localStorage.setItem(storageKey, JSON.stringify(storedCards));
+}
 
 saveButton.addEventListener('click', function(event) {
     const name = document.getElementById('name').value;
     const leraRating = document.getElementById('leraRating').value;
     const artemRating = document.getElementById('artemRating').value;
-    let imageSrc = imagePreview.src;
-    let storedCards = JSON.parse(localStorage.getItem(storageKey)) || [];
+    const imageSrc = imagePreview.src;
     
+    let storedCards = JSON.parse(localStorage.getItem(storageKey)) || [];
+
     const newCardData = {
         id: Date.now().toString(),
         name: name,
